@@ -38,4 +38,4 @@ jobs:
       run: |
         echo "${{secrets.DEPLOY_KEY}}" > deploy_key
         chmod 600 ./deploy_key
-        ssh -i ./deploy_key ubuntu@jagadeesh-wordpress.ddns.net 'sudo docker cp ${{secrets.THEME_CONTENT}}/sage wordpress:${{secrets.DOCKER_THEME_FOLDER}}'
+        ssh -i ./deploy_key ubuntu@jagadeesh-wordpress.ddns.net 'sudo docker cp ${{secrets.THEME_CONTENT}} wordpress:${{secrets.DOCKER_THEME_FOLDER}}'
