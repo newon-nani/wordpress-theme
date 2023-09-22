@@ -1,22 +1,21 @@
-# wordpress-theme
 # Dockerized WordPress Theme Deployment
 
 This guide will walk you through the process of creating a custom WordPress theme, building and launching it using Docker, and automating the deployment with GitHub Actions.
 
 ## Step 1: Create a Folder for Your Project
 
-shell
+
 mkdir docker-wordpress-theme
 cd docker-wordpress-theme
 
 ## Step 2: Creating a Custom WordPress Theme
-shell
+
 Copy code
 cd docker-wordpress-theme
 composer create-project roots/sage
 
 ## Step 3: Install Node.js and npm
-shell
+
 Copy code
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc
@@ -27,13 +26,13 @@ node -v
 npm -v
 
 ## Step 4: Install Yarn
-shell
+
 Copy code
 npm install --global yarn
 yarn --version
 
 ## Step 5: Building and Launching a Custom WordPress Theme
-shell
+
 Copy code
 cd ./sage
 yarn add node-sass
