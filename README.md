@@ -4,17 +4,17 @@ This guide will walk you through the process of creating a custom WordPress them
 
 ## Step 1: Create a Folder for Your Project
 
-sh
+```sh
 mkdir docker-wordpress-theme
 cd docker-wordpress-theme
-
+```
 ## Step 2: Creating a Custom WordPress Theme
-sh
+```sh
 cd docker-wordpress-theme
 composer create-project roots/sage
-
+```
 ## Step 3: Install Node.js and npm
-sh
+```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc
 nvm install 18.0.0
@@ -22,18 +22,18 @@ nvm use 18.0.0
 nvm alias default 18.0.0
 node -v
 npm -v
-
+```
 ## Step 4: Install Yarn
-sh
+```sh
 npm install --global yarn
 yarn --version
-
+```
 ## Step 5: Building and Launching a Custom WordPress Theme
-sh
+```sh
 cd ./sage
 yarn add node-sass
 yarn build
-
+```
 ## Step 6: Automating Deployment with GitHub Actions
 
 Create a .github/workflows directory in the root path.
