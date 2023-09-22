@@ -33,6 +33,5 @@ jobs:
           --exclude /.github/ \
           --exclude /node_modules/ \
           ./ ${{env.dest}}
-        sudo docker cp ${{secrets.THEME_CONTENT}}/sage wordpress:/var/www/html/wp-content/themes/wordpress-theme
+        sudo docker cp ${{secrets.THEME_CONTENT}}/sage wordpress:${{secrets.DOCKER_THEME_FOLDER}}
 
-        
