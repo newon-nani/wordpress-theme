@@ -12,10 +12,10 @@ jobs:
         node-version: 18.x
     - name: Install dependencies
       run: |
-        composer install -o
+        cd /sage && composer install -o
         npm install
     - name: Build
-      run: npm run build
+      run: cd /sage && npm run build
     
     - name: Sync
       env:
